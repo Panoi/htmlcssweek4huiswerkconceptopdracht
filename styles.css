@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oleo+Script+Swash+Caps:wght@400;700&family=Poppins:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Oleo+Script+Swash+Caps:wght@400;700&family=Poppins:wght@300;400;500&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/*Paars #5722CD;
+Blauw #4845E4;
+Roze #ED4385;
+Zwart #0C0C0C (voor standaard tekst);
+Lichtpaars #F2F0FF (voor de grote zwevende woorden, zoals "hello" en "services") Uitzonderingen:
+Lichtgrijs #F3F6F9 (voor de achtergrond van de projecten)
+Grijs #7A7A7A (voor de service-tegel tekst);*/
+
+/*////////////////////////
+    Table of Contents
+    1. Global Styles
+    2. Typography
+    3. Layout
+        3.1 Reusables
+        3.2 Other
+    4. Areas
+        4.1 Header
+        4.2 Introduction
+        etc.
+    5. Media Queries
+////////////////////////*/
+
+/* ------------------------------- 1. Algemeen -------------------------------- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+
+
+/* ------------------------------- 2. Typography ----------------------------------- */
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    flex-basis: 100vw;
+    color: #0C0C0C
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Merriweather", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* --------------- 4.05 NAVbar  ------------------------- */
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 20px 0 20px 0;
+    background-color: #4845E4;
+}
+
+ul {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-around;
+    flex-basis: 700px;
+    font-weight: 300;
+    padding: 20px 40px 0 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+
+/* --------------- 4.1 Header ------------------------- */
+
+header {
+    display: flex;
+    justify-content: center;
+    padding: 200px 0 350px 0;
+    background-color: #4845E4;
+    position: relative;
+}
+
+.header-inner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-basis: 1300px;
+}
+
+h1 {
+    font-size: 4rem;
+    color: white;
+
+}
+
+.header-inner-container p {
+    color: white;
+    font-size: 2.3rem;
+    padding: 30px 0px 30px 0;
+    font-weight: 300;
+}
+
+.button-header {
+    padding: 35px 70px 35px 70px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #ED4385;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1), 0 -5px 15px rgba(0, 0, 0, 0.06);
+    text-transform: uppercase;
+}
+
+.line-header {
+    position: absolute;
+    bottom: 0;
+}
+
+.driehoek-een{
+    width: 100vw;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    border-right: 100vw solid transparent;
+    border-bottom: 30px solid white;
+}
+
+
+/* --------------- 4.2 Main Introduction ------------------- */
+
+.main-section-one-outer-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+
+.main-section-one-inner-container {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 1300px;
+    text-align: center;
+    font-size: 2rem;
+    color: #5722CD;
+    padding-top: 150px;
+}
+
+.main-section-one-inner-container h2 {
+    padding: 20px 0 20px 0;
+    font-weight: 500;
+}
+
+.main-section-one-inner-container p {
+    padding: 100px 0 100px 0;
+    color: #0C0C0C;
+}
+
+.main-section-one-inner-container p a {
+    text-decoration: none;
+    color: #5722CD;
+}
+
+.driehoek-twee{
+    width: 100vw;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    border-right: 100vw solid transparent;
+    border-bottom: 30px solid #F3F6F9;
+}
+
+.main-section-one-outer-container::before {
+    content: 'hello';
+    position: absolute;
+    top: 0;
+    font-size: 25rem;
+    z-index: -1;
+    color: #F3F6F9;
+}
+
+/* --------------- 4.3 main projects ------------------- */
+
+.section-two-section {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #F3F6F9;
+    padding: 250px 50px 250px 50px;
+    flex-basis: 100vw;
+    position: relative;
+    z-index: 0;
+    align-items: center;
+}
+
+.main-section-two-outer-container {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 95vw;
+}
+
+.main-article-section-two {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.main-article-section-two-reverse {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    padding: 150px 0 150px 0;
+}
+
+.article-inner-container-img {
+    display: flex;
+    flex-basis: 50%;
+    flex-grow: 0;
+    flex-shrink: 1;
+    box-shadow: 0 35px 10px rgba(0.0, 0, 0, 0.03), 0 0 0 rgba(0, 0, 0, 0.00);
+}
+
+.work-image {
+    width: 100%;
+    flex-shrink: 1;
+}
+
+.article-inner-container-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 100px 0 100px;
+    flex-basis: 600px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    margin-left: 50px;
+    position: relative;
+}
+
+.article-inner-container-text::before {
+    content: '';
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-image: url("assets/squiggle_line.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: bottom left;
+}
+
+.reverse {
+    margin: 0 50px 0 0;
+}
+
+.article-inner-container-text h2{
+    padding: 20px 0 80px 0;
+    font-size: 3rem;
+    position: relative;
+}
+
+.article-inner-container-text h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 80px;
+    height: 80px;
+    background-image: url("assets/squiggle_line.svg");
+    background-size: 100% 100%;
+}
+
+.article-inner-container-text p {
+    font-size: 1.5rem;
+    padding: 45px 0 10px 0;
+}
+
+
+.article-inner-container-text p a {
+    text-decoration: none;
+    color: #5722CD;
+    position: relative;
+}
+
+
+.article-inner-container-text p a::after {
+    content: "";
+    width: 15%;
+    height: 2px;
+    background-color: #5722CD;
+    transition: width .35s ease-in-out;
+    position: absolute;
+    left: 165px;
+    top: 15px;
+}
+
+.article-inner-container-text p a:hover::after {
+    width: 60%;
+}
+
+.driehoek-drie{
+    width: 100vw;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    border-right: 100vw solid transparent;
+    border-bottom: 30px solid white;
+}
+
+.section-two-section::before {
+    content: 'work';
+    position: absolute;
+    top: 0;
+    font-size: 25rem;
+    z-index: -1;
+    color: white;
+}
+
+/* --------------- 4.4 main articles ------------------- */
+.section-three-section {
+    display: flex;
+    justify-content: center;
+    padding: 325px 0 325px 0;
+    position: relative;
+    align-items:center;
+}
+
+.main-section-three-outer-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-basis: 1650px;
+    flex-wrap: wrap;
+    gap: 50px;
+
+}
+
+.article-section-three {
+    border: 2px solid #5722CD;
+    flex-basis: 500px;
+    box-shadow: 0 15px 10px rgba(0, 0, 0, 0.1), 0 -5px 15px rgba(0, 0, 0, 0.06);
+    height: 500px;
+    z-index: 1;
+    background-color: white;
+}
+
+.article-section-three img {
+    width: 150px;
+    padding: 40px 0 0 40px;
+}
+
+.article-section-three h3 {
+    color: #5722CD;
+    padding: 10px 0 30px 40px;
+    font-size: 2.1rem;
+    font-weight: bolder;
+}
+
+.article-section-three p {
+    padding: 0 30px 0 40px;
+    color: #7A7A7A;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.section-three-section::before {
+    content: 'services';
+    position: absolute;
+    top: 3%;
+    font-size: 20rem;
+    z-index: -1;
+    color: #F3F6F9;
+}
+
+
+/* --------------- 4.5 main formulier ------------------- */
+
+.section-formulier {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #4845E4;
+    padding: 100px 0 150px 0;
+}
+
+.formulier-container {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 1300px;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%
+}
+
+.formulier-container h2 {
+    font-size: 4rem;
+    color: #F3F6F9;
+}
+
+.button-formulier {
+    text-align: center;
+    margin: 40px 0 0 0;
+    padding: 35px 100px 35px 100px;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #ED4385;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.01), 0 -5px 15px rgba(0, 0, 0, 0.06);
+    text-transform: uppercase;
+}
+
+.form-invoerveld {
+    width: 70%;
+    padding: 20px 0 20px 20px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+}
+
+.formulier-container p {
+    color: #F3F6F9;
+    padding: 30px 0 0 0;
+    font-weight: 300;
+    font-size: 1.5rem
+}
+
+label {
+    color: #F3F6F9;
+    margin-top: 40px;
+    font-size: 1.2rem;
+    text-align: left;
+    width: 69%;
+
+}
+
+.driehoek-vier{
+    width: 100vw;
+    height: 30px;
+    position: absolute;
+    bottom: 0;
+    border-right: 100vw solid transparent;
+    border-bottom: 30px solid #4845E4;
+}
+
+/* --------------- 4.6 Footer ------------------- */
+
+footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: #0C0C0C;
+    padding: 35px 0 35px 0;
+}
+
+footer p {
+    color: #F3F6F9;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+/* ------------------------------- 5. Media Queries -------------------------------- */
+
+
+@media screen and  (max-width: 1240px) {
+    .main-article-section-two {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .main-article-section-two-reverse {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        padding: 0 0 0 0;
+        width: 100%;
+    }
+    .article-inner-container-text {
+        padding: 0 100px 0 0;
+        margin-left: 0;
+    }
+    .main-section-one-outer-container::before{
+        font-size: 20rem;
+    }
+
+    .section-two-section::before{
+        font-size: 20rem;
+    }
+
+    .section-three-section::before{
+        font-size: 10rem;
+        top: 5%;
+    }
+}
